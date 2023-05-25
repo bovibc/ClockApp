@@ -90,7 +90,10 @@ struct TimerFunctionality: View {
     
     private func getInitButton() -> some View {
         return Button {
-            startTimer()
+            getTime()
+            if timeInSeconds != 0 {
+                startTimer()
+            }
         } label: {
             Text("Iniciar")
                 .frame(width: 80, height: 80)
@@ -104,23 +107,24 @@ struct TimerFunctionality: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                if shouldShowTime() {
-                    ZStack {
-                        CircularProgress(timeInSeconds: timeInSeconds, pastTime: 0, shouldShowTime: false, lineWidth: 8)
-                        CircularProgress(timeInSeconds: timeInSeconds, pastTime: timeLeft, shouldShowTime: true, lineWidth: 8, color: .yellow)
-                            .onReceive(timer, perform: { _ in
-                                timeLeft -= 1
-                                if timeLeft == 0 {
-                                    self.cancelTimer()
-                                }
-                            })
+                VStack {
+                    if shouldShowTime() {
+                        ZStack {
+                            CircularProgress(timeInSeconds: timeInSeconds, pastTime: 0, shouldShowTime: false, lineWidth: 8)
+                            CircularProgress(timeInSeconds: timeInSeconds, pastTime: timeLeft, shouldShowTime: true, lineWidth: 8, color: .yellow)
+                                .onReceive(timer, perform: { _ in
+                                    timeLeft -= 1
+                                    if timeLeft == 0 {
+                                        self.cancelTimer()
+                                    }
+                                })
+                        }
+                    } else {
+                        getPicker()
                     }
-                        .padding(.all, 64)
-                } else {
-                    getPicker()
-                        .padding(.leading, 64)
-                        .padding(.trailing, 64)
                 }
+                .frame(width: 280, height: 280, alignment: .center)
+                .padding(.all, 8)
                 
                 HStack {
                     getCancelButton()
