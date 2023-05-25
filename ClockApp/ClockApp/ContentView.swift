@@ -7,17 +7,43 @@
 
 import SwiftUI
 
+//struct TabViewColor: View {
+//    init() {
+//        UITabBar.appearance().backgroundColor = UIColor.white
+//    }
+//}
+
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView{
+            
+            AlarmeView()
+                .tabItem{
+                    Image(systemName: "alarm.fill")
+                    Text("Alarme")
+                }
+            Stopwatch()
+                .tabItem{
+                    Image(systemName: "stopwatch.fill")
+                    Text("Cronômetro")
+                }
+            TimerFunctionality()
+                .tabItem{
+                    Image(systemName: "timer")
+                    Text("Timer")
+                }
         }
-        .padding()
+        .accentColor(.orange)
+        .onAppear() {
+            UITabBar.appearance().backgroundColor = .systemGray6
+        }
+        
     }
+    
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
