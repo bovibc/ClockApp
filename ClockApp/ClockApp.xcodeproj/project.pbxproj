@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083A2A932A1E39D100C6F8E8 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A2A922A1E39D100C6F8E8 /* CircularProgress.swift */; };
+		083A2A952A1E526F00C6F8E8 /* SongSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A2A942A1E526F00C6F8E8 /* SongSheet.swift */; };
 		089275412A1BAA9200D5AC92 /* ClockAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089275402A1BAA9200D5AC92 /* ClockAppApp.swift */; };
 		089275432A1BAA9200D5AC92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089275422A1BAA9200D5AC92 /* ContentView.swift */; };
 		089275452A1BAA9300D5AC92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089275442A1BAA9300D5AC92 /* Assets.xcassets */; };
 		089275482A1BAA9300D5AC92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089275472A1BAA9300D5AC92 /* Preview Assets.xcassets */; };
 		61426BE62A1D07980007349C /* AlarmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BE52A1D07980007349C /* AlarmeView.swift */; };
 		61426BE82A1E49130007349C /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BE72A1E49130007349C /* Stopwatch.swift */; };
-		61426BEA2A1E49CB0007349C /* TimerFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BE92A1E49CB0007349C /* TimerFunctionality.swift */; };
+		08C97D6D2A1CFC7D0072880F /* TimerFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806E6042A1CD9F300A1EA04 /* TimerFunctionality.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0806E6042A1CD9F300A1EA04 /* TimerFunctionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFunctionality.swift; sourceTree = "<group>"; };
+		083A2A922A1E39D100C6F8E8 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
+		083A2A942A1E526F00C6F8E8 /* SongSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSheet.swift; sourceTree = "<group>"; };
 		0892753D2A1BAA9200D5AC92 /* ClockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089275402A1BAA9200D5AC92 /* ClockAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockAppApp.swift; sourceTree = "<group>"; };
 		089275422A1BAA9200D5AC92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +43,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0806E6032A1CD9B300A1EA04 /* TimerFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+				083A2A912A1E39C400C6F8E8 /* Aux */,
+				0806E6042A1CD9F300A1EA04 /* TimerFunctionality.swift */,
+				083A2A942A1E526F00C6F8E8 /* SongSheet.swift */,
+			);
+			path = TimerFunctionality;
+			sourceTree = "<group>";
+		};
+		083A2A912A1E39C400C6F8E8 /* Aux */ = {
+			isa = PBXGroup;
+			children = (
+				083A2A922A1E39D100C6F8E8 /* CircularProgress.swift */,
+			);
+			path = Aux;
+			sourceTree = "<group>";
+		};
 		089275342A1BAA9200D5AC92 = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +83,8 @@
 				61426BEB2A1F79100007349C /* AlarmeView */,
 				089275402A1BAA9200D5AC92 /* ClockAppApp.swift */,
 				089275422A1BAA9200D5AC92 /* ContentView.swift */,
-				61426BE92A1E49CB0007349C /* TimerFunctionality.swift */,
 				61426BE72A1E49130007349C /* Stopwatch.swift */,
+				0806E6032A1CD9B300A1EA04 /* TimerFunctionality */,
 				089275442A1BAA9300D5AC92 /* Assets.xcassets */,
 				089275462A1BAA9300D5AC92 /* Preview Content */,
 			);
@@ -158,7 +181,9 @@
 				089275432A1BAA9200D5AC92 /* ContentView.swift in Sources */,
 				089275412A1BAA9200D5AC92 /* ClockAppApp.swift in Sources */,
 				61426BE82A1E49130007349C /* Stopwatch.swift in Sources */,
-				61426BEA2A1E49CB0007349C /* TimerFunctionality.swift in Sources */,
+				08C97D6D2A1CFC7D0072880F /* TimerFunctionality.swift in Sources */,
+				083A2A932A1E39D100C6F8E8 /* CircularProgress.swift in Sources */,
+				083A2A952A1E526F00C6F8E8 /* SongSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +318,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +328,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chronos.ClockApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,8 +351,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,9 +361,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chronos.ClockApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
