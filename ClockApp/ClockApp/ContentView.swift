@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-//struct TabViewColor: View {
-//    init() {
-//        UITabBar.appearance().backgroundColor = UIColor.white
-//    }
-//}
-
-
 struct ContentView: View {
     var body: some View {
         TabView{
@@ -50,3 +43,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
