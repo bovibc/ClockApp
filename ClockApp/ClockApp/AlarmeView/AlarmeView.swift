@@ -12,6 +12,8 @@ struct AlarmeView: View {
 //    let image = UIImage(systemName: "bed.double.fill")
     
     let bedImage = UIImage(systemName: "bed.double.fill.mine")
+    @State private var showingSheet = false
+    
     var body: some View {
         
         NavigationView {
@@ -25,23 +27,40 @@ struct AlarmeView: View {
             }
             .navigationBarTitle("Alarme")
             .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("+") {
-                            print("+ pressed")
-                        }
-                    }
-                    ToolbarItem(placement: .navigationBarLeading){
-                        Button("Editar") {
-                            print("Editar pressed")
-                        }
+                
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button("Editar") {
+                        print("Editar pressed")
                     }
                 }
-      
+                
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("+") {
+                        showingSheet.toggle()
+                    }
+                    .sheet(isPresented: $showingSheet) {
+                        NavigationView {
+                            AdicionarAlarme()
+                                .navigationBarItems(leading: Button ("Cancelar", action:{}))
+                                .navigationTitle("Adicionar Alarme").navigationBarTitleDisplayMode(.inline)
+                                .navigationBarItems(trailing: Button (action: {
+                                    print("")
+                                }, label: Text("Salvar").bold))
+                        }.accentColor(.orange)
+                    }
+                    
+                    
+                    
+                }
+                
+            }
+            
         }
         .accentColor(.orange)
         
         
-   }
+    }
 }
 
 struct AlarmeView_Previews: PreviewProvider {
@@ -49,3 +68,4 @@ struct AlarmeView_Previews: PreviewProvider {
         AlarmeView()
     }
 }
+
