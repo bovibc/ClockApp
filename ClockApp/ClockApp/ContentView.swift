@@ -2,8 +2,11 @@
 //  ContentView.swift
 //  ClockApp
 //
-//  Created by Clissia Bozzer Bovi on 22/05/23.
+//  Created by Bruna Lacerda on 24/05/23.
 //
+
+
+// tab bar
 
 import SwiftUI
 
@@ -32,6 +35,7 @@ struct ContentView: View {
             UITabBar.appearance().backgroundColor = .systemGray6
         }
         
+
     }
     
 }

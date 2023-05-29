@@ -13,12 +13,15 @@
 		089275432A1BAA9200D5AC92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089275422A1BAA9200D5AC92 /* ContentView.swift */; };
 		089275452A1BAA9300D5AC92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089275442A1BAA9300D5AC92 /* Assets.xcassets */; };
 		089275482A1BAA9300D5AC92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089275472A1BAA9300D5AC92 /* Preview Assets.xcassets */; };
+		08A0B17D2A24ECBB001E1999 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0B17C2A24ECBB001E1999 /* Stopwatch.swift */; };
 		08C97D6D2A1CFC7D0072880F /* TimerFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806E6042A1CD9F300A1EA04 /* TimerFunctionality.swift */; };
 		61426BE62A1D07980007349C /* AlarmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BE52A1D07980007349C /* AlarmeView.swift */; };
-		61426BE82A1E49130007349C /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BE72A1E49130007349C /* Stopwatch.swift */; };
 		61426BED2A1F8AC20007349C /* AdicionarAlarme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BEC2A1F8AC20007349C /* AdicionarAlarme.swift */; };
 		61426BEF2A20F9180007349C /* DiasDaSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BEE2A20F9180007349C /* DiasDaSemana.swift */; };
 		61426BF12A20FADE0007349C /* ListaSons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BF02A20FADE0007349C /* ListaSons.swift */; };
+		D94CABE72A1E49010094B28D /* Relogio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CABE62A1E49010094B28D /* Relogio.swift */; };
+		D97E49332A1F767E00CAB3CE /* ListTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97E49322A1F767E00CAB3CE /* ListTimeZone.swift */; };
+		D9AAB5EF2A210DA90025BE58 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAB5EE2A210DA90025BE58 /* List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,11 +33,14 @@
 		089275422A1BAA9200D5AC92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		089275442A1BAA9300D5AC92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		089275472A1BAA9300D5AC92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		08A0B17C2A24ECBB001E1999 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		61426BE52A1D07980007349C /* AlarmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmeView.swift; sourceTree = "<group>"; };
-		61426BE72A1E49130007349C /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		61426BEC2A1F8AC20007349C /* AdicionarAlarme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarAlarme.swift; sourceTree = "<group>"; };
 		61426BEE2A20F9180007349C /* DiasDaSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiasDaSemana.swift; sourceTree = "<group>"; };
 		61426BF02A20FADE0007349C /* ListaSons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSons.swift; sourceTree = "<group>"; };
+		D94CABE62A1E49010094B28D /* Relogio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relogio.swift; sourceTree = "<group>"; };
+		D97E49322A1F767E00CAB3CE /* ListTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTimeZone.swift; sourceTree = "<group>"; };
+		D9AAB5EE2A210DA90025BE58 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +91,13 @@
 		0892753F2A1BAA9200D5AC92 /* ClockApp */ = {
 			isa = PBXGroup;
 			children = (
+				08A0B17B2A24ECAD001E1999 /* Stopwatch */,
 				089275462A1BAA9300D5AC92 /* Preview Content */,
-				61426BEB2A1F79100007349C /* AlarmeView */,
-				0806E6032A1CD9B300A1EA04 /* TimerFunctionality */,
 				089275402A1BAA9200D5AC92 /* ClockAppApp.swift */,
 				089275422A1BAA9200D5AC92 /* ContentView.swift */,
-				61426BE72A1E49130007349C /* Stopwatch.swift */,
+				61426BEB2A1F79100007349C /* AlarmeView */,
+				0806E6032A1CD9B300A1EA04 /* TimerFunctionality */,
+				D93E94B12A1CD9C60095E1BA /* Relogio */,
 				089275442A1BAA9300D5AC92 /* Assets.xcassets */,
 			);
 			path = ClockApp;
@@ -104,6 +111,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		08A0B17B2A24ECAD001E1999 /* Stopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				08A0B17C2A24ECBB001E1999 /* Stopwatch.swift */,
+			);
+			path = Stopwatch;
+			sourceTree = "<group>";
+		};
 		61426BEB2A1F79100007349C /* AlarmeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +128,16 @@
 				61426BF02A20FADE0007349C /* ListaSons.swift */,
 			);
 			path = AlarmeView;
+			sourceTree = "<group>";
+		};
+		D93E94B12A1CD9C60095E1BA /* Relogio */ = {
+			isa = PBXGroup;
+			children = (
+				D94CABE62A1E49010094B28D /* Relogio.swift */,
+				D97E49322A1F767E00CAB3CE /* ListTimeZone.swift */,
+				D9AAB5EE2A210DA90025BE58 /* List.swift */,
+			);
+			path = Relogio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,11 +211,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				61426BF12A20FADE0007349C /* ListaSons.swift in Sources */,
+				08A0B17D2A24ECBB001E1999 /* Stopwatch.swift in Sources */,
 				61426BE62A1D07980007349C /* AlarmeView.swift in Sources */,
 				089275432A1BAA9200D5AC92 /* ContentView.swift in Sources */,
 				61426BEF2A20F9180007349C /* DiasDaSemana.swift in Sources */,
+				D97E49332A1F767E00CAB3CE /* ListTimeZone.swift in Sources */,
+				D9AAB5EF2A210DA90025BE58 /* List.swift in Sources */,
+				D94CABE72A1E49010094B28D /* Relogio.swift in Sources */,
 				089275412A1BAA9200D5AC92 /* ClockAppApp.swift in Sources */,
-				61426BE82A1E49130007349C /* Stopwatch.swift in Sources */,
 				61426BED2A1F8AC20007349C /* AdicionarAlarme.swift in Sources */,
 				08C97D6D2A1CFC7D0072880F /* TimerFunctionality.swift in Sources */,
 				083A2A932A1E39D100C6F8E8 /* CircularProgress.swift in Sources */,
