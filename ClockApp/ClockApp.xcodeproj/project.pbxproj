@@ -95,21 +95,16 @@
 		0892753F2A1BAA9200D5AC92 /* ClockApp */ = {
 			isa = PBXGroup;
 			children = (
-
 				083A2A912A1E39C400C6F8E8 /* Aux */,
-				08A0B17B2A24ECAD001E1999 /* Stopwatch */,
-				089275462A1BAA9300D5AC92 /* Preview Content */,
 				089275402A1BAA9200D5AC92 /* ClockAppApp.swift */,
 				089275422A1BAA9200D5AC92 /* ContentView.swift */,
 				08A0B17B2A24ECAD001E1999 /* Stopwatch */,
 				61426BEB2A1F79100007349C /* AlarmeView */,
 				0806E6032A1CD9B300A1EA04 /* TimerFunctionality */,
 				D93E94B12A1CD9C60095E1BA /* Relogio */,
-				089275442A1BAA9300D5AC92 /* Assets.xcassets */,
 				D9BC59802A24F29D00762497 /* File.swift */,
 				D98C8D4D2A261E4000F11CBB /* teste.swift */,
 				089275462A1BAA9300D5AC92 /* Preview Content */,
-
 			);
 			path = ClockApp;
 			sourceTree = "<group>";
