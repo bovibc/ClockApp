@@ -14,6 +14,11 @@ struct ContentView: View {
     var body: some View {
         TabView{
             
+            Relogio()
+                .tabItem{
+                    Image(systemName: "globe")
+                    Text("Relógio")
+                }
             AlarmeView()
                 .tabItem{
                     Image(systemName: "alarm.fill")

@@ -27,6 +27,11 @@ struct Stopwatch: View {
         progressTime % 60
     }
     
+    private func resetAction() {
+        resetLaps()
+        lapButtonEnabled = false
+    }
+    
     var body: some View {
         VStack {
             HStack(spacing: 3) {
@@ -40,82 +45,32 @@ struct Stopwatch: View {
                     .offset(y: -5)
                 StopwatchUnit(timeUnit: seconds)
             }
+            .padding(.bottom, 100)
             
             HStack {
                 if showResetButton {
-                    Button(action: {
-                        resetLaps()
-                        lapButtonEnabled = false
-                    }) {
-                        ZStack {
-                            Circle()
-                                .frame(width: 120, height: 90, alignment: .center)
-                                .foregroundColor(.gray)
-                            Circle()
-                                .frame(width: 120, height: 85, alignment: .center)
-                                .foregroundColor(.black)
-                            Circle()
-                                .frame(width: 120, height: 80, alignment: .center)
-                                .foregroundColor(.gray)
-                            Text("Reset")
-                                .font(.system(size: 20))
-                                .foregroundColor(.white)
-                        }
-                    }
+                    GenericButton(type: .reset, action: resetAction)
+                    
                 } else {
-                    Button(action: {
-                        lap()
-                    }) {
-                        ZStack {
-                            Circle()
-                                .frame(width: 120, height: 90, alignment: .center)
-                                .foregroundColor(.gray)
-                            Circle()
-                                .frame(width: 120, height: 85, alignment: .center)
-                                .foregroundColor(.black)
-                            Circle()
-                                .frame(width: 120, height: 80, alignment: .center)
-                                .foregroundColor(.gray)
-                            Text("Lap")
-                                .font(.system(size: 20))
-                                .foregroundColor(.white)
-                        }
-                    }
+                    GenericButton(type: .lap, action: lap)
                     .disabled(!lapButtonEnabled)
                 }
                 
                 Spacer()
                 
-                Button(action: {
-                    toggleStopwatch()
-                }) {
-                    ZStack {
-                        Circle()
-                            .frame(width: 120, height: 90, alignment: .center)
-                            .foregroundColor(isRunning ? .red : .green)
-                        Circle()
-                            .frame(width: 120, height: 85, alignment: .center)
-                            .foregroundColor(.black)
-                        Circle()
-                            .frame(width: 120, height: 80, alignment: .center)
-                            .foregroundColor(isRunning ? .red : .green)
-                        Text(buttonText)
-                            .font(.system(size: 20))
-                            .foregroundColor(.white)
-                    }
-                }
+                GenericButton(type: ((isRunning) ? .stop : .initiate), action: toggleStopwatch)
             }
             
-            if laps.count > 0 {
-                Rectangle()
+            Rectangle()
                     .frame(height: 1)
                     .foregroundColor(.gray)
                     .padding(.horizontal, 10)
-                
+            
+            if laps.count > 0 {
                 VStack(alignment: .leading, spacing: 5) {
                     ForEach(laps.indices, id: \.self) { index in
                         HStack {
-                            Text("Lap \(index + 1):")
+                            Text("Volta \(index + 1):")
                             Spacer()
                             Text(formattedTime(laps[index]))
                         }
@@ -134,9 +89,9 @@ struct Stopwatch: View {
     
     var buttonText: String {
         if progressTime == 0 {
-            return "Start"
+            return "Iniciar"
         } else {
-            return isRunning ? "Stop" : "Start"
+            return isRunning ? "Parar" : "Iniciar"
         }
     }
     
@@ -163,7 +118,7 @@ struct Stopwatch: View {
     }
     
     func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
             progressTime += 1
         }
     }
@@ -188,11 +143,13 @@ struct Stopwatch: View {
     func formattedTime(_ time: Int) -> String {
         let seconds = time % 60
         let minutes = (time / 60)
+        let hours = time / 3600
         
         let formattedSeconds = seconds < 10 ? "0\(seconds)" : "\(seconds)"
         let formattedMinutes = minutes < 10 ? "0\(minutes)" : "\(minutes)"
+        let formattedHours = hours < 10 ? "0\(hours)" : "\(hours)"
         
-        return "\(formattedMinutes):\(formattedSeconds)"
+        return "\(formattedHours):\(formattedMinutes):\(formattedSeconds)"
     }
 }
 
@@ -231,8 +188,3 @@ extension String {
         return String(arrayString[index])
     }
 }
-
-
-
-
-

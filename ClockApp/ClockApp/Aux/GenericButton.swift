@@ -9,7 +9,7 @@ import SwiftUI
 
 enum ButtonType: String {
     case stop = "Parar"
-    case reset = "Resetar"
+    case reset = "Zerar"
     case initiate = "Iniciar"
     case lap = "Volta"
     case resume = "Retomar"
@@ -61,7 +61,7 @@ struct GenericButton: View {
             action?()
         } label: {
             Text(type.rawValue)
-                .frame(width: 70, height: 70)
+                .frame(width: 80, height: 80)
                 .foregroundColor(getForegroundColor())
                 .background(getBackgroundColor()).opacity(0.8)
                 .clipShape(Circle())
