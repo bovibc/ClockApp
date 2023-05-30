@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CircularProgress: View {
-    
+
     let timeInSeconds: Int
     let pastTime: Int
     let shouldShowTime: Bool
     @State var lineWidth: CGFloat = 16
     @State var color: Color = .green
-    
+
     var body: some View {
         ZStack {
             Circle()
