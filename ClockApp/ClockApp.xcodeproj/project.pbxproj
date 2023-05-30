@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082864322A24D5FB00090A04 /* GenericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082864312A24D5FB00090A04 /* GenericButton.swift */; };
 		083A2A932A1E39D100C6F8E8 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A2A922A1E39D100C6F8E8 /* CircularProgress.swift */; };
 		083A2A952A1E526F00C6F8E8 /* SongSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A2A942A1E526F00C6F8E8 /* SongSheet.swift */; };
 		089275412A1BAA9200D5AC92 /* ClockAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089275402A1BAA9200D5AC92 /* ClockAppApp.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		0806E6042A1CD9F300A1EA04 /* TimerFunctionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFunctionality.swift; sourceTree = "<group>"; };
+		082864312A24D5FB00090A04 /* GenericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButton.swift; sourceTree = "<group>"; };
 		083A2A922A1E39D100C6F8E8 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		083A2A942A1E526F00C6F8E8 /* SongSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSheet.swift; sourceTree = "<group>"; };
 		0892753D2A1BAA9200D5AC92 /* ClockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				083A2A922A1E39D100C6F8E8 /* CircularProgress.swift */,
+				082864312A24D5FB00090A04 /* GenericButton.swift */,
 			);
 			path = Aux;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				D94CABE72A1E49010094B28D /* Relogio.swift in Sources */,
 				089275412A1BAA9200D5AC92 /* ClockAppApp.swift in Sources */,
 				61426BED2A1F8AC20007349C /* AdicionarAlarme.swift in Sources */,
+				082864322A24D5FB00090A04 /* GenericButton.swift in Sources */,
 				08C97D6D2A1CFC7D0072880F /* TimerFunctionality.swift in Sources */,
 				083A2A932A1E39D100C6F8E8 /* CircularProgress.swift in Sources */,
 				083A2A952A1E526F00C6F8E8 /* SongSheet.swift in Sources */,
