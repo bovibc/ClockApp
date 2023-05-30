@@ -13,6 +13,7 @@ struct AlarmeView: View {
     
     let bedImage = UIImage(systemName: "bed.double.fill.mine")
     @State private var showingSheet = false
+    @Environment(\.presentationMode) var presententionMode
     
     var body: some View {
         
@@ -27,14 +28,11 @@ struct AlarmeView: View {
             }
             .navigationBarTitle("Alarme")
             .toolbar {
-                
                 ToolbarItem(placement: .navigationBarLeading){
                     Button("Editar") {
                         print("Editar pressed")
                     }
                 }
-                
-                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("+") {
                         showingSheet.toggle()
@@ -42,15 +40,13 @@ struct AlarmeView: View {
                     .sheet(isPresented: $showingSheet) {
                         NavigationView {
                             AdicionarAlarme()
-                                .navigationBarItems(leading: Button ("Cancelar", action:{}))
+                                .navigationBarItems(leading: Button ("Cancelar", action: {showingSheet = false}))
                                 .navigationTitle("Adicionar Alarme").navigationBarTitleDisplayMode(.inline)
                                 .navigationBarItems(trailing: Button (action: {
                                     print("")
                                 }, label: Text("Salvar").bold))
                         }.accentColor(.orange)
                     }
-                    
-                    
                     
                 }
                 

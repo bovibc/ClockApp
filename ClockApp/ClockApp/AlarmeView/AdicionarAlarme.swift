@@ -43,7 +43,7 @@ struct AdicionarAlarme: View {
     
     var body: some View {
         GeometryReader { geometry in
-            NavigationStack {
+        //    NavigationStack {
                 VStack{
                     HStack {
                         getPicker()
@@ -85,7 +85,7 @@ struct AdicionarAlarme: View {
                     
                     
                 }
-            }
+         //   }
             
             
         }

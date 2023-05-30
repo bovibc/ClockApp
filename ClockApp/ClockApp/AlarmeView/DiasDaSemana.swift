@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-
-
-
 struct DiasDaSemana: View {
+    @Environment (\.dismiss) var dismiss
     @State var todo_domingo: Bool = false
     @State var toda_segunda_feira: Bool = false
     @State var toda_terca_feira: Bool = false
@@ -18,10 +16,6 @@ struct DiasDaSemana: View {
     @State var toda_quinta_feira: Bool = false
     @State var toda_sexta_feira: Bool = false
     @State var todo_sabado: Bool = false
-    
-    
-    
-    
     
     var body: some View {
         List{
@@ -35,9 +29,20 @@ struct DiasDaSemana: View {
             Toggle("Toda quinta-feira", isOn: $toda_quinta_feira).toggleStyle(OrangeCheckToggleStyle())
             Toggle("Toda sexta-feira", isOn: $toda_sexta_feira).toggleStyle(OrangeCheckToggleStyle())
             Toggle("Todo sabado", isOn: $todo_sabado).toggleStyle(OrangeCheckToggleStyle())
-            
-            
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.left")
+                        Text("Voltar")
+                    }
+                }
+            }
+        }.navigationTitle("Repetir")
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -55,7 +60,6 @@ struct OrangeCheckToggleStyle: ToggleStyle {
                 }
                 }.accentColor(.orange)
                 .bold()
-                
         }
     }
 }
@@ -67,10 +71,6 @@ struct DiasDaSemana_Previews: PreviewProvider {
 }
 
 //Today:
-
-//- check box
-
-//cabeçalho dessa pagina
 
 //loop ddos numeros pagina anterior
 
