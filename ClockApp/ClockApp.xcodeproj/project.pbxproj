@@ -59,7 +59,6 @@
 		0806E6032A1CD9B300A1EA04 /* TimerFunctionality */ = {
 			isa = PBXGroup;
 			children = (
-				083A2A912A1E39C400C6F8E8 /* Aux */,
 				0806E6042A1CD9F300A1EA04 /* TimerFunctionality.swift */,
 				083A2A942A1E526F00C6F8E8 /* SongSheet.swift */,
 			);
@@ -94,6 +93,7 @@
 		0892753F2A1BAA9200D5AC92 /* ClockApp */ = {
 			isa = PBXGroup;
 			children = (
+				083A2A912A1E39C400C6F8E8 /* Aux */,
 				08A0B17B2A24ECAD001E1999 /* Stopwatch */,
 				089275462A1BAA9300D5AC92 /* Preview Content */,
 				089275402A1BAA9200D5AC92 /* ClockAppApp.swift */,
