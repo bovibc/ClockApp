@@ -26,6 +26,7 @@ struct TimerFunctionality: View {
     //MARK: - Timer Functions
     private func startTimer() {
         getTime()
+        if timeInSeconds == 0 { return }
         isTimerRunning = true
         timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }
@@ -139,7 +140,7 @@ struct TimerFunctionality: View {
                             Text("Ao terminar")
                                 .foregroundColor(.white)
                             Spacer()
-                            Text("Retomar")
+                            Text("Radar")
                                 .foregroundColor(.gray)
                             Image(systemName: "arrow.right")
                                 .foregroundColor(.gray)
@@ -153,12 +154,8 @@ struct TimerFunctionality: View {
                         SongSheet()
                             .navigationBarItems(trailing: Button(action: {
                                 print("")
-                            }, label: Text("Definir").bold)
-                                .foregroundColor(.orange)
-                            )
-                            .navigationBarItems(leading: Button("Cancelar", action: {showingSheet = false})
-                                .foregroundColor(.orange)
-                            )
+                            }, label: Text("Definir").bold))
+                            .navigationBarItems(leading: Button("Cancelar", action: {}))
                             .navigationTitle("Ao Terminar").navigationBarTitleDisplayMode(.inline)
                             
                     }
