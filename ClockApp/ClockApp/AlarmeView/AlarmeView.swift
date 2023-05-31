@@ -68,8 +68,8 @@ struct AlarmeView: View {
                     .padding()
                 
                 
-                ForEach(list, id: \.self) { inidie in
-                    Text("\(inidie.etiqueta)")
+                ForEach(list, id: \.self) {
+                    AlarmCell(alarmData: $0)
                 }
             }
             .navigationBarTitle("Alarme")
