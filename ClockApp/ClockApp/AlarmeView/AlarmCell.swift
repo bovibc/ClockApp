@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct AlarmCell: View {
-    var alarmData: AlarmData
+
     @State var isOn: Bool = true
+    var alarmData: AlarmData
+    var color: Color {
+        return isOn ? .white : .gray
+    }
     
     var body: some View {
         let repetir = alarmData.repetir
@@ -19,12 +23,13 @@ struct AlarmCell: View {
                 VStack {
                     Text(String(format: "%02d:%02d", alarmData.hours, alarmData.minutes))
                         .font(.largeTitle)
+                        .foregroundColor(color)
                     if repetir == "Nunca" {
                         Text("\(alarmData.etiqueta)")
-                            .padding(.leading, -16)
+                            .foregroundColor(color)
                     } else {
                         Text("\(alarmData.etiqueta), \(alarmData.repetir)")
-                        .padding(.leading, -16)
+                            .foregroundColor(color)
                     }
                 }
 
