@@ -21,7 +21,7 @@ struct AlarmeView: View {
     @State var som = "Default"
     
     private let defaultRepetir: String = "Nunca"
-    private let defaultAlarme: String = "Alarme"
+    private let defaultAlarme: String = ""
     private let defaultSom: String = "Default"
     private let defaultAdiar: Bool = true
     
@@ -44,7 +44,7 @@ struct AlarmeView: View {
     }
     
     private func addElement() {
-        if alarme == "" { alarme = defaultAlarme }
+        if alarme == "" { alarme = "Alarme" }
         let alarm = AlarmData(etiqueta: alarme, adiar: adiar, repetir: repetir, som: som, hours: hours, minutes: minutes)
         list.append(alarm)
         setDefaultValues()
@@ -101,7 +101,6 @@ struct AlarmeView: View {
                                                     Text("Repetir")
                                                     Spacer()
                                                     Text(repetir)
-                                                    TextField("Alarme", text: $alarme)
                                                         .multilineTextAlignment(.trailing)
                                                         .foregroundColor(.gray)
                                                 }
