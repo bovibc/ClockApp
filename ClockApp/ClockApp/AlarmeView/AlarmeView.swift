@@ -15,7 +15,7 @@ struct AlarmeView: View {
     @State private var list: Array<AlarmData> = []
     @State private var hours: Int = 0
     @State private var minutes: Int = 0
-    @State var alarme: String = "Alarme"
+    @State var alarme: String = ""
     @State var adiar: Bool = true
     @State var repetir = "Nunca"
     @State var som = "Default"
@@ -44,6 +44,7 @@ struct AlarmeView: View {
     }
     
     private func addElement() {
+        if alarme == "" { alarme = defaultAlarme }
         let alarm = AlarmData(etiqueta: alarme, adiar: adiar, repetir: repetir, som: som, hours: hours, minutes: minutes)
         list.append(alarm)
         setDefaultValues()
