@@ -57,7 +57,7 @@ struct Stopwatch: View {
                             Circle()
                                 .frame(width: 120, height: 80, alignment: .center)
                                 .foregroundColor(.gray)
-                            Text("Reset")
+                            Text("Zerar")
                                 .font(.system(size: 20))
                                 .foregroundColor(.white)
                         }
@@ -76,7 +76,7 @@ struct Stopwatch: View {
                             Circle()
                                 .frame(width: 120, height: 80, alignment: .center)
                                 .foregroundColor(.gray)
-                            Text("Lap")
+                            Text("Voltar")
                                 .font(.system(size: 20))
                                 .foregroundColor(.white)
                         }

@@ -17,9 +17,4 @@ struct AlarmData: Hashable {
     var minutes: Int
 }
 
-struct Celula: View {
-    var body: some View{
-        Text("ll")
-    }
-    
-}
+

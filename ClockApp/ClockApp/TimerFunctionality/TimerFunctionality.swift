@@ -219,7 +219,7 @@ struct TimerFunctionality: View {
                             Text("Ao terminar")
                                 .foregroundColor(.white)
                             Spacer()
-                            Text("Radar")
+                            Text("Retomar")
                                 .foregroundColor(.gray)
                             Image(systemName: "arrow.right")
                                 .foregroundColor(.gray)
@@ -233,8 +233,12 @@ struct TimerFunctionality: View {
                         SongSheet()
                             .navigationBarItems(trailing: Button(action: {
                                 print("")
-                            }, label: Text("Definir").bold))
-                            .navigationBarItems(leading: Button("Cancelar", action: {}))
+                            }, label: Text("Definir").bold)
+                                .foregroundColor(.orange)
+                            )
+                            .navigationBarItems(leading: Button("Cancelar", action: {showingSheet = false})
+                                .foregroundColor(.orange)
+                            )
                             .navigationTitle("Ao Terminar").navigationBarTitleDisplayMode(.inline)
                             
                     }

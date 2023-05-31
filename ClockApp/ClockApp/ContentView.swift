@@ -19,7 +19,6 @@ struct ContentView: View {
                     Image(systemName: "globe")
                     Text("Relógio")
                 }
-            
             AlarmeView()
                 .tabItem{
                     Image(systemName: "alarm.fill")

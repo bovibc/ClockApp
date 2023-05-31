@@ -12,10 +12,11 @@ struct AlarmeView: View {
     let bedImage = UIImage(systemName: "bed.double.fill.mine")
     @State private var showingSheet = false
     @Environment(\.presentationMode) var presententionMode
-    @State private var list: Array<AlarmData> = [AlarmData(etiqueta: "a", adiar: true, repetir: "", som: "", hours: 1, minutes: 2)]
+    @State private var list: Array<AlarmData> = []
+    //[AlarmData(etiqueta: "a", adiar: true, repetir: "", som: "", hours: 1, minutes: 2)]
     @State private var hours: Int = 0
     @State private var minutes: Int = 0
-    @State var Alarme: String = ""
+    @State var Alarme: String = "Alarme"
     @State var adiar: Bool = true
     @State var repetir = "Nunca"
     @State var som = "Default"
@@ -27,14 +28,14 @@ struct AlarmeView: View {
                     Text("\($0)").listRowBackground(Color.orange)
                 }
             } .pickerStyle(.wheel)
-
+            
             
             Picker("Timer", selection: $minutes) {
                 ForEach((0...59), id: \.self) {
                     Text("\($0)")
                 }
             } .pickerStyle(.wheel)
-
+            
         }
     }
     
@@ -53,85 +54,88 @@ struct AlarmeView: View {
                     .font(Font.body.bold())
                     .frame(maxWidth: .infinity, alignment:.leading)
                     .padding()
-
-                    
-                        ForEach(list, id: \.self) { inidie in
-                            Text("\(inidie.etiqueta)")
-                        }
-                    
+                
+                
+                ForEach(list, id: \.self) { inidie in
+                    Text("\(inidie.etiqueta)")
+                }
             }
             .navigationBarTitle("Alarme")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading){
                     Button("Editar") {
                         print("Editar pressed")
-                    }
+                    }.foregroundColor(.orange)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("+") {
+                    Button(action: {
                         showingSheet.toggle()
-                    }
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                    .foregroundColor(.orange)
                     .sheet(isPresented: $showingSheet) {
                         NavigationView {
                             GeometryReader { geometry in
-                                    VStack{
-                                        HStack {
-                                            getPicker()
-                                        }
-                                        
-                                        List {
-                                            Section {
-                                                NavigationLink(destination: DiasDaSemana()) {
-                                                    HStack {
-                                                        Text("Repetir")
-                                                        Spacer()
-                                                        Text(repetir)
-                                                            .foregroundColor(.gray)
-                                                    }
-                                                }
-                                                
+                                VStack{
+                                    HStack {
+                                        getPicker()
+                                    }
+                                    
+                                    List {
+                                        Section {
+                                            NavigationLink(destination: DiasDaSemana()) {
                                                 HStack {
-                                                    Text("Etiqueta")
+                                                    Text("Repetir")
                                                     Spacer()
-                                                    TextField("Alarme", text: $Alarme)
-                                                        .multilineTextAlignment(.trailing)
+                                                    Text(repetir)
                                                         .foregroundColor(.gray)
                                                 }
-                                                
-                                                NavigationLink(destination: ListaSons()) {
-                                                    HStack {
-                                                        Text("Som")
-                                                        Spacer()
-                                                        Text(som)
-                                                            .foregroundColor(.gray)
-                                                    }
-                                                }
-                                                
+                                            }
+                                            
+                                            HStack {
+                                                Text("Etiqueta")
+                                                Spacer()
+                                                TextField("Alarme", text: $Alarme)
+                                                    .multilineTextAlignment(.trailing)
+                                                    .foregroundColor(.gray)
+                                            }
+                                            
+                                            NavigationLink(destination: ListaSons()) {
                                                 HStack {
-                                                    Toggle("Adiar", isOn: $adiar)
+                                                    Text("Som")
+                                                    Spacer()
+                                                    Text(som)
+                                                        .foregroundColor(.gray)
                                                 }
+                                            }
+                                            
+                                            HStack {
+                                                Toggle("Adiar", isOn: $adiar)
                                             }
                                         }
                                     }
+                                }
                             }
                             .navigationBarItems(leading: Button ("Cancelar", action: {showingSheet = false}))
                             .navigationTitle("Adicionar Alarme").navigationBarTitleDisplayMode(.inline)
                             .navigationBarItems(trailing: Button (action: {
-                                   addElement()
-                                   
+                                addElement()
+                                
                             }, label: Text("Salvar").bold))
                             .accentColor(.orange)
                         }
-                                
-                        }
+                        
                     }
-                    
                 }
                 
             }
             
         }
+        
+    }
 }
+
 
 struct AlarmeView_Previews: PreviewProvider {
     static var previews: some View {

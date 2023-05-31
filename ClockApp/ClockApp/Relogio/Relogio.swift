@@ -92,12 +92,22 @@ struct Relogio: View {
                 
             }
             .navigationBarTitle("Relógio")
-             .navigationBarItems(leading: EditButton())
-//             .onMove(perform: self.move)
+            
+             //.navigationBarItems(leading: EditButton())
+            
+            
+            
+            //             .onMove(perform: self.move)
 //             .onDelete(perform: self.delete)
             // no final da list
                 
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button("Editar") {
+                        print("Editar pressed")
+                    }
+                }
+
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         showSheet.toggle()
