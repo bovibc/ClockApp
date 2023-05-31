@@ -10,6 +10,7 @@ import SwiftUI
 struct TimerFunctionality: View {
 
     //MARK: - Properties
+    @State private var presentAlert = false
     @State private var hours: Int = 0
     @State private var isTimerRunning: Bool = false
     @State private var isTimerPaused: Bool = false
@@ -21,11 +22,6 @@ struct TimerFunctionality: View {
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     private var progressColor: Color = Color(uiColor: UIColor(red: 241/255, green: 164/255, blue: 60/255, alpha: 1))
-    private var cancelButtonColor: Color {
-        return !isTimerRunning ? .gray : .white
-    }
-
-    private var initButtonColor: Color = .white
 
     //MARK: - Timer Functions
     private func startTimer() {
@@ -85,84 +81,7 @@ struct TimerFunctionality: View {
             Text("**s**")
         }
     }
-
-    private func getCancelButton() -> some View {
-        return Button {
-            cancelTimer()
-        } label: {
-            Text("cancelar")
-                .frame(width: 70, height: 70)
-                            .foregroundColor(cancelButtonColor)
-                            .background(Color.gray).opacity(0.8)
-                            .opacity(0.8)
-                            .clipShape(Circle())
-                            .padding(.all, 3)
-                            .overlay(
-                                Circle()
-                                    .stroke(cancelButtonColor)
-                                        .opacity(0.3))
-        }
-    }
-
-    private func getResumeButton() -> some View {
-        return Button {
-            resumeTimer()
-        } label: {
-            Text("Retomar")
-                .frame(width: 70, height: 70)
-                .foregroundColor(initButtonColor)
-                .background(Color.green).opacity(0.8)
-                .opacity(0.8)
-                .clipShape(Circle())
-                .padding(.all, 3)
-                .overlay(
-                    Circle()
-                        .stroke(initButtonColor)
-                            .opacity(0.3))
-        }
-    }
-
-    private func getInitButton() -> some View {
-        return Button {
-            getTime()
-            if timeInSeconds != 0 {
-                startTimer()
-            }
-        } label: {
-            Text("Iniciar")
-                .frame(width: 70, height: 70)
-                .foregroundColor(initButtonColor)
-                .background(Color.green).opacity(0.9)
-                .opacity(0.8)
-                .clipShape(Circle())
-                .padding(.all, 3)
-                .overlay(
-                    Circle()
-                        .stroke(initButtonColor)
-                            .opacity(0.3))
-
-        }
-    }
-
-    private func getPauseButton()  -> some View {
-        return Button {
-            pauseTimer()
-        } label: {
-            Text("Pausar")
-                .frame(width: 70, height: 70)
-                .foregroundColor(initButtonColor)
-                .background(progressColor)
-                .opacity(0.8)
-                .clipShape(Circle())
-                .padding(.all, 3)
-                .overlay(
-                    Circle()
-                        .stroke(initButtonColor)
-                            .opacity(0.3))
-
-        }
-    }
-
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -175,6 +94,7 @@ struct TimerFunctionality: View {
                                     timeLeft -= 1
                                     if timeLeft == 0 {
                                         self.cancelTimer()
+                                        presentAlert = true
                                     }
                                 })
                         }
@@ -186,25 +106,25 @@ struct TimerFunctionality: View {
                 .padding(.all, 8)
 
                 HStack {
-                    getCancelButton()
+                    GenericButton(type: .cancel,isTimerRunning: isTimerRunning ,action: cancelTimer)
                         .disabled(!isTimerRunning)
 
                     Spacer()
 
                     if isTimerRunning {
                         if isTimerPaused {
-                            getResumeButton()
+                            GenericButton(type: .resume, action: resumeTimer)
                         } else {
-                            getPauseButton()
+                            GenericButton(type: .pause, action: pauseTimer)
                         }
                     } else {
-                        getInitButton()
+                        GenericButton(type: .initiate, action: startTimer)
                     }
                     
                 }
                 .padding(.leading, 16)
                 .padding(.trailing, 16)
-                .padding(.top, 64)
+                .padding(.top, 8)
 
                 Button {
                     showingSheet.toggle()
@@ -248,6 +168,9 @@ struct TimerFunctionality: View {
                 .padding(.trailing, 16)
                 .padding(.top, 32)
             }
+            .alert("Alerta", isPresented: $presentAlert, actions: {
+                Button("Ok", role: .cancel, action: {})
+            })
             .padding(.top, 16)
         }
     }

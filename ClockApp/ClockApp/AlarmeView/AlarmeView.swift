@@ -13,13 +13,17 @@ struct AlarmeView: View {
     @State private var showingSheet = false
     @Environment(\.presentationMode) var presententionMode
     @State private var list: Array<AlarmData> = []
-    //[AlarmData(etiqueta: "a", adiar: true, repetir: "", som: "", hours: 1, minutes: 2)]
     @State private var hours: Int = 0
     @State private var minutes: Int = 0
-    @State var Alarme: String = "Alarme"
+    @State var alarme: String = "Alarme"
     @State var adiar: Bool = true
     @State var repetir = "Nunca"
     @State var som = "Default"
+    
+    private let defaultRepetir: String = "Nunca"
+    private let defaultAlarme: String = "Alarme"
+    private let defaultSom: String = "Default"
+    private let defaultAdiar: Bool = true
     
     private func getPicker() -> some View {
         return HStack(spacing: 0) {
@@ -40,10 +44,17 @@ struct AlarmeView: View {
     }
     
     private func addElement() {
-        let alarm = AlarmData(etiqueta: Alarme, adiar: adiar, repetir: repetir, som: som, hours: hours, minutes: minutes)
+        let alarm = AlarmData(etiqueta: alarme, adiar: adiar, repetir: repetir, som: som, hours: hours, minutes: minutes)
         list.append(alarm)
-        print(list)
+        setDefaultValues()
         showingSheet = false
+    }
+    
+    private func setDefaultValues() {
+        alarme = defaultAlarme
+        adiar = defaultAdiar
+        repetir = defaultRepetir
+        som = defaultSom
     }
     
     var body: some View {
@@ -89,6 +100,8 @@ struct AlarmeView: View {
                                                     Text("Repetir")
                                                     Spacer()
                                                     Text(repetir)
+                                                    TextField("Alarme", text: $alarme)
+                                                        .multilineTextAlignment(.trailing)
                                                         .foregroundColor(.gray)
                                                 }
                                             }
@@ -96,7 +109,7 @@ struct AlarmeView: View {
                                             HStack {
                                                 Text("Etiqueta")
                                                 Spacer()
-                                                TextField("Alarme", text: $Alarme)
+                                                TextField("Alarme", text: $alarme)
                                                     .multilineTextAlignment(.trailing)
                                                     .foregroundColor(.gray)
                                             }
