@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct AlarmData: Hashable {
     var etiqueta: String = "Alarme"
@@ -14,4 +15,11 @@ struct AlarmData: Hashable {
     var som: String
     var hours: Int
     var minutes: Int
+}
+
+struct Celula: View {
+    var body: some View{
+        Text("ll")
+    }
+    
 }
