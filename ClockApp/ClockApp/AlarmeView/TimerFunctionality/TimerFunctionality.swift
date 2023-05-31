@@ -26,6 +26,7 @@ struct TimerFunctionality: View {
     //MARK: - Timer Functions
     private func startTimer() {
         getTime()
+        if timeInSeconds == 0 { return }
         isTimerRunning = true
         timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }

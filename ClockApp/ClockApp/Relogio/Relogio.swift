@@ -13,8 +13,6 @@ struct Relogio: View {
     
     @State var showSheet : Bool = false
     @State private var ListTimeZone = cities
-    //@ObservedObject var cityStore = CityStore()
-    
     
     var body: some View {
         NavigationView {
@@ -35,66 +33,22 @@ struct Relogio: View {
                                 .font(.system(size: 40))
                         }
                     }
-                    
-                    
-                    
-                    //                ForEach(ListTimeZone, id: \.self) { list in
-                    //                    Text(list)
+                  
                 }.onMove { indexSet, offset in
                     ListTimeZone.move(fromOffsets: indexSet, toOffset: offset)
-                    
                 }
-                //.onMove(perform: move)
                 .onDelete(perform: delete)
-                //.listRowBackground(Color.black)
-                // .onDelete(perform: delete)
                 
-                
-                //                VStack {
-                //                    //ScrollView(){
-                //                        VStack {
-                //                            Text("Hoje, +0h")
-                //                                .frame(maxWidth: .infinity, alignment: .leading)
-                //                                .foregroundColor(.gray)
-                //                                .font(.system(size: 20))
-                //
-                //                            HStack {
-                //                                Text("São Paulo")
-                //                                    .frame(maxWidth: .infinity, alignment: .leading)
-                //                                    .font(.system(size: 28))
-                //                                Text("9:31")
-                //                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                //                                    .font(.system(size: 40))
-                //                            }
-                //                        }
-                //
-                //                        Divider()
-                // .padding(.vertical)
-                
-                //                        VStack {
-                //                            Text("Hoje, +0h")
-                //                                .frame(maxWidth: .infinity, alignment: .leading)
-                //                                .foregroundColor(.gray)
-                //                                .font(.system(size: 20))
-                //
-                //                            HStack {
-                //                                Text("Brasília")
-                //                                    .frame(maxWidth: .infinity, alignment: .leading)
-                //                                    .font(.system(size: 28))
-                //                                Text("9:31")
-                //                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                //                                    .font(.system(size: 40))
-                //                            }
-                //                        }
-                
-                
-                // }
-                //}
             }
             .navigationBarTitle("Relógio")
             .navigationBarItems(leading: EditButton())
-            
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button("Editar") {
+                        print("Editar pressed")
+                    }
+                }
+
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         showSheet.toggle()

@@ -38,7 +38,7 @@ struct DiasDaSemana: View {
                     HStack {
                         Image(systemName: "chevron.left")
                         Text("Voltar")
-                    }
+                    } .foregroundColor(.orange)
                 }
             }
         }.navigationTitle("Repetir")
