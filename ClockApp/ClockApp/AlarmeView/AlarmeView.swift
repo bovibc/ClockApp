@@ -67,9 +67,12 @@ struct AlarmeView: View {
                     .frame(maxWidth: .infinity, alignment:.leading)
                     .padding()
                 
-                
-                ForEach(list, id: \.self) {
-                    AlarmCell(alarmData: $0)
+                ForEach(0..<list.count, id: \.self) { index in
+                    VStack {
+                        if index == 0 { Divider() }
+                        AlarmCell(alarmData: list[index])
+                        Divider()
+                    }
                 }
             }
             .navigationBarTitle("Alarme")
@@ -101,12 +104,9 @@ struct AlarmeView: View {
                                                     Text("Repetir")
                                                     Spacer()
                                                     Text(repetir)
-                                                    TextField("Alarme", text: $alarme)
-                                                        .multilineTextAlignment(.trailing)
                                                         .foregroundColor(.gray)
                                                 }
                                             }
-                                            
                                             HStack {
                                                 Text("Etiqueta")
                                                 Spacer()
@@ -114,7 +114,6 @@ struct AlarmeView: View {
                                                     .multilineTextAlignment(.trailing)
                                                     .foregroundColor(.gray)
                                             }
-                                            
                                             NavigationLink(destination: ListaSons()) {
                                                 HStack {
                                                     Text("Som")

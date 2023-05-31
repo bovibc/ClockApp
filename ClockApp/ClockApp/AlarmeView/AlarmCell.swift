@@ -18,27 +18,29 @@ struct AlarmCell: View {
     var body: some View {
         let repetir = alarmData.repetir
         
-        ZStack {
-            HStack {
-                VStack {
+            HStack{
+                VStack(alignment: .leading) {
                     Text(String(format: "%02d:%02d", alarmData.hours, alarmData.minutes))
                         .font(.largeTitle)
                         .foregroundColor(color)
+                        .multilineTextAlignment(.leading)
                     if repetir == "Nunca" {
                         Text("\(alarmData.etiqueta)")
                             .foregroundColor(color)
+                            .multilineTextAlignment(.leading)
                     } else {
                         Text("\(alarmData.etiqueta), \(alarmData.repetir)")
                             .foregroundColor(color)
+                            .multilineTextAlignment(.leading)
                     }
                 }
-
                 Toggle("", isOn: $isOn)
+                    .multilineTextAlignment(.trailing)
             }
             .padding(.leading)
             .padding(.trailing)
             .frame(width: .infinity, height: 72)
-        }
+        
     }
 }
 
