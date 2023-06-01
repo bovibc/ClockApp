@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		082864322A24D5FB00090A04 /* GenericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082864312A24D5FB00090A04 /* GenericButton.swift */; };
+		08290F6A2A2637AF0005C801 /* AlarmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08290F692A2637AF0005C801 /* AlarmData.swift */; };
 		083A2A932A1E39D100C6F8E8 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A2A922A1E39D100C6F8E8 /* CircularProgress.swift */; };
 		083A2A952A1E526F00C6F8E8 /* SongSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A2A942A1E526F00C6F8E8 /* SongSheet.swift */; };
+		0880704F2A2774820005A790 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0880704E2A2774820005A790 /* AlarmCell.swift */; };
 		089275412A1BAA9200D5AC92 /* ClockAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089275402A1BAA9200D5AC92 /* ClockAppApp.swift */; };
 		089275432A1BAA9200D5AC92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089275422A1BAA9200D5AC92 /* ContentView.swift */; };
 		089275452A1BAA9300D5AC92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089275442A1BAA9300D5AC92 /* Assets.xcassets */; };
 		08A0B17D2A24ECBB001E1999 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0B17C2A24ECBB001E1999 /* Stopwatch.swift */; };
 		08C97D6D2A1CFC7D0072880F /* TimerFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806E6042A1CD9F300A1EA04 /* TimerFunctionality.swift */; };
 		61426BE62A1D07980007349C /* AlarmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BE52A1D07980007349C /* AlarmeView.swift */; };
-		61426BED2A1F8AC20007349C /* AdicionarAlarme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BEC2A1F8AC20007349C /* AdicionarAlarme.swift */; };
 		61426BEF2A20F9180007349C /* DiasDaSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BEE2A20F9180007349C /* DiasDaSemana.swift */; };
 		61426BF12A20FADE0007349C /* ListaSons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BF02A20FADE0007349C /* ListaSons.swift */; };
 		BD0CDB0F2A276FE1005FDAFA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CDB0E2A276FE1005FDAFA /* ViewModel.swift */; };
@@ -30,21 +31,24 @@
 		BDC3B1502A26CE1F0090CF93 /* LapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B14F2A26CE1F0090CF93 /* LapType.swift */; };
 		D94CABE72A1E49010094B28D /* Relogio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CABE62A1E49010094B28D /* Relogio.swift */; };
 		D97E49332A1F767E00CAB3CE /* ListTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97E49322A1F767E00CAB3CE /* ListTimeZone.swift */; };
+		D98C8D4E2A261E4000F11CBB /* teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C8D4D2A261E4000F11CBB /* teste.swift */; };
 		D9AAB5EF2A210DA90025BE58 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAB5EE2A210DA90025BE58 /* List.swift */; };
+		D9BC59812A24F29D00762497 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BC59802A24F29D00762497 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0806E6042A1CD9F300A1EA04 /* TimerFunctionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFunctionality.swift; sourceTree = "<group>"; };
 		082864312A24D5FB00090A04 /* GenericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButton.swift; sourceTree = "<group>"; };
+		08290F692A2637AF0005C801 /* AlarmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmData.swift; sourceTree = "<group>"; };
 		083A2A922A1E39D100C6F8E8 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		083A2A942A1E526F00C6F8E8 /* SongSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSheet.swift; sourceTree = "<group>"; };
+		0880704E2A2774820005A790 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		0892753D2A1BAA9200D5AC92 /* ClockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089275402A1BAA9200D5AC92 /* ClockAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockAppApp.swift; sourceTree = "<group>"; };
 		089275422A1BAA9200D5AC92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		089275442A1BAA9300D5AC92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08A0B17C2A24ECBB001E1999 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		61426BE52A1D07980007349C /* AlarmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmeView.swift; sourceTree = "<group>"; };
-		61426BEC2A1F8AC20007349C /* AdicionarAlarme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarAlarme.swift; sourceTree = "<group>"; };
 		61426BEE2A20F9180007349C /* DiasDaSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiasDaSemana.swift; sourceTree = "<group>"; };
 		61426BF02A20FADE0007349C /* ListaSons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSons.swift; sourceTree = "<group>"; };
 		BD0CDB0E2A276FE1005FDAFA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 		BDC3B14F2A26CE1F0090CF93 /* LapType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapType.swift; sourceTree = "<group>"; };
 		D94CABE62A1E49010094B28D /* Relogio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relogio.swift; sourceTree = "<group>"; };
 		D97E49322A1F767E00CAB3CE /* ListTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTimeZone.swift; sourceTree = "<group>"; };
+		D98C8D4D2A261E4000F11CBB /* teste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teste.swift; sourceTree = "<group>"; };
 		D9AAB5EE2A210DA90025BE58 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		D9BC59802A24F29D00762497 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +120,9 @@
 				089275422A1BAA9200D5AC92 /* ContentView.swift */,
 				08A0B17B2A24ECAD001E1999 /* Stopwatch */,
 				61426BEB2A1F79100007349C /* AlarmeView */,
-				0806E6032A1CD9B300A1EA04 /* TimerFunctionality */,
 				D93E94B12A1CD9C60095E1BA /* Relogio */,
+				D9BC59802A24F29D00762497 /* File.swift */,
+				D98C8D4D2A261E4000F11CBB /* teste.swift */,
 				089275462A1BAA9300D5AC92 /* Preview Content */,
 			);
 			path = ClockApp;
@@ -142,9 +149,11 @@
 			isa = PBXGroup;
 			children = (
 				61426BE52A1D07980007349C /* AlarmeView.swift */,
-				61426BEC2A1F8AC20007349C /* AdicionarAlarme.swift */,
 				61426BEE2A20F9180007349C /* DiasDaSemana.swift */,
 				61426BF02A20FADE0007349C /* ListaSons.swift */,
+				08290F692A2637AF0005C801 /* AlarmData.swift */,
+				0880704E2A2774820005A790 /* AlarmCell.swift */,
+				0806E6032A1CD9B300A1EA04 /* TimerFunctionality */,
 			);
 			path = AlarmeView;
 			sourceTree = "<group>";
@@ -250,16 +259,19 @@
 				BDC3B1442A2629030090CF93 /* ClockView.swift in Sources */,
 				08A0B17D2A24ECBB001E1999 /* Stopwatch.swift in Sources */,
 				BD0CDB0F2A276FE1005FDAFA /* ViewModel.swift in Sources */,
+				D98C8D4E2A261E4000F11CBB /* teste.swift in Sources */,
 				61426BE62A1D07980007349C /* AlarmeView.swift in Sources */,
 				BDC3B1422A2627950090CF93 /* TickShape.swift in Sources */,
 				BDC3B14E2A26CDB20090CF93 /* LapItemInspector.swift in Sources */,
 				BDC3B14C2A26C2940090CF93 /* NeedleView.swift in Sources */,
 				089275432A1BAA9200D5AC92 /* ContentView.swift in Sources */,
 				61426BEF2A20F9180007349C /* DiasDaSemana.swift in Sources */,
+				0880704F2A2774820005A790 /* AlarmCell.swift in Sources */,
 				D97E49332A1F767E00CAB3CE /* ListTimeZone.swift in Sources */,
 				D9AAB5EF2A210DA90025BE58 /* List.swift in Sources */,
 				D94CABE72A1E49010094B28D /* Relogio.swift in Sources */,
 				089275412A1BAA9200D5AC92 /* ClockAppApp.swift in Sources */,
+				D9BC59812A24F29D00762497 /* File.swift in Sources */,
 				61426BED2A1F8AC20007349C /* AdicionarAlarme.swift in Sources */,
 				082864322A24D5FB00090A04 /* GenericButton.swift in Sources */,
 				BDC3B1502A26CE1F0090CF93 /* LapType.swift in Sources */,
@@ -267,6 +279,7 @@
 				BDC3B1462A26327A0090CF93 /* CircleWatchView.swift in Sources */,
 				083A2A932A1E39D100C6F8E8 /* CircularProgress.swift in Sources */,
 				083A2A952A1E526F00C6F8E8 /* SongSheet.swift in Sources */,
+				08290F6A2A2637AF0005C801 /* AlarmData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

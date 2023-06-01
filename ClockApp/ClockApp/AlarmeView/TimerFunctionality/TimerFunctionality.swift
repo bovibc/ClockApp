@@ -10,6 +10,7 @@ import SwiftUI
 struct TimerFunctionality: View {
 
     //MARK: - Properties
+    @State private var presentAlert = false
     @State private var hours: Int = 0
     @State private var isTimerRunning: Bool = false
     @State private var isTimerPaused: Bool = false
@@ -25,6 +26,7 @@ struct TimerFunctionality: View {
     //MARK: - Timer Functions
     private func startTimer() {
         getTime()
+        if timeInSeconds == 0 { return }
         isTimerRunning = true
         timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }
@@ -80,9 +82,7 @@ struct TimerFunctionality: View {
             Text("**s**")
         }
     }
-
     
-
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -95,6 +95,7 @@ struct TimerFunctionality: View {
                                     timeLeft -= 1
                                     if timeLeft == 0 {
                                         self.cancelTimer()
+                                        presentAlert = true
                                     }
                                 })
                         }
@@ -124,7 +125,7 @@ struct TimerFunctionality: View {
                 }
                 .padding(.leading, 16)
                 .padding(.trailing, 16)
-                .padding(.top, 64)
+                .padding(.top, 8)
 
                 Button {
                     showingSheet.toggle()
@@ -164,6 +165,9 @@ struct TimerFunctionality: View {
                 .padding(.trailing, 16)
                 .padding(.top, 32)
             }
+            .alert("Alerta", isPresented: $presentAlert, actions: {
+                Button("Ok", role: .cancel, action: {})
+            })
             .padding(.top, 16)
         }
     }
