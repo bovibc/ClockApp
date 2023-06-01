@@ -15,15 +15,15 @@ struct Stopwatch: View {
     @State private var lapButtonEnabled = false
     @State private var showResetButton = false
     
-    var hours: Int {
-        progressTime / 3600
-    }
-    
     var minutes: Int {
-        (progressTime % 3600) / 60
+        (progressTime / 6000) % 60
     }
-    
+
     var seconds: Int {
+        (progressTime / 60) % 60
+    }
+
+    var milliseconds: Int {
         progressTime % 60
     }
     
@@ -35,15 +35,15 @@ struct Stopwatch: View {
     var body: some View {
         VStack {
             HStack(spacing: 3) {
-                StopwatchUnit(timeUnit: hours)
+                StopwatchUnit(timeUnit: minutes)
                 Text(":")
                     .font(.system(size: 70))
                     .offset(y: -5)
-                StopwatchUnit(timeUnit: minutes)
+                StopwatchUnit(timeUnit: seconds)
                 Text(",")
                     .font(.system(size: 70))
                     .offset(y: -5)
-                StopwatchUnit(timeUnit: seconds)
+                StopwatchUnit(timeUnit: milliseconds)
             }
             .padding(.bottom, 100)
             
@@ -72,7 +72,7 @@ struct Stopwatch: View {
                         HStack {
                             Text("Volta \(index + 1):")
                             Spacer()
-                            Text(formattedTime(laps[index]))
+                            Text(FormattedString(_timeElapsed:)(Double(laps[index])))
                         }
                         .padding(.horizontal, 10)
                         
@@ -84,14 +84,6 @@ struct Stopwatch: View {
                 }
                 .padding(.top, 10)
             }
-        }
-    }
-    
-    var buttonText: String {
-        if progressTime == 0 {
-            return "Iniciar"
-        } else {
-            return isRunning ? "Parar" : "Iniciar"
         }
     }
     
@@ -140,36 +132,38 @@ struct Stopwatch: View {
         laps.append(progressTime)
     }
     
-    func formattedTime(_ time: Int) -> String {
-        let seconds = time % 60
-        let minutes = (time / 60)
-        let hours = time / 3600
+    private func FormattedString(_timeElapsed: Double) -> String {
+        var timeElapsed = _timeElapsed
         
-        let formattedSeconds = seconds < 10 ? "0\(seconds)" : "\(seconds)"
-        let formattedMinutes = minutes < 10 ? "0\(minutes)" : "\(minutes)"
-        let formattedHours = hours < 10 ? "0\(hours)" : "\(hours)"
+        let minutes: Int = Int(timeElapsed / 60)
+        timeElapsed -= (Double(minutes) * 60)
         
-        return "\(formattedHours):\(formattedMinutes):\(formattedSeconds)"
+        let seconds: Int = Int(timeElapsed)
+        timeElapsed -= Double(seconds)
+        
+        let milliseconds = Int(timeElapsed * 100)
+        
+        return String(format: "%02d:%02d,%02d", minutes, seconds, milliseconds)
     }
-}
 
-struct StopwatchUnit: View {
-    var timeUnit: Int
-    var timeUnitStr: String {
-        let timeUnitStr = String(timeUnit)
-        return timeUnit < 10 ? "0" + timeUnitStr : timeUnitStr
-    }
-    
-    var body: some View {
-        VStack {
-            ZStack {
-                HStack(spacing: -5) {
-                    Text(timeUnitStr.substring(index: 0))
-                        .font(.system(size: 70))
-                        .frame(width: 50)
-                    Text(timeUnitStr.substring(index: 1))
-                        .font(.system(size: 70))
-                        .frame(width: 50)
+    struct StopwatchUnit: View {
+        var timeUnit: Int
+        var timeUnitStr: String {
+            let timeUnitStr = String(timeUnit)
+            return timeUnit < 10 ? "0" + timeUnitStr : timeUnitStr
+        }
+        
+        var body: some View {
+            VStack {
+                ZStack {
+                    HStack(spacing: -5) {
+                        Text(String(timeUnitStr.prefix(1)))
+                            .font(.system(size: 70))
+                            .frame(width: 50)
+                        Text(String(timeUnitStr.suffix(1)))
+                            .font(.system(size: 70))
+                            .frame(width: 50)
+                    }
                 }
             }
         }

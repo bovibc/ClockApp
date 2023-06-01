@@ -40,11 +40,10 @@ struct ContentView: View {
             UITabBar.appearance().backgroundColor = .systemGray6
         }
         
-
+        
     }
     
 }
-
 
 
 struct ContentView_Previews: PreviewProvider {

@@ -19,6 +19,15 @@
 		61426BED2A1F8AC20007349C /* AdicionarAlarme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BEC2A1F8AC20007349C /* AdicionarAlarme.swift */; };
 		61426BEF2A20F9180007349C /* DiasDaSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BEE2A20F9180007349C /* DiasDaSemana.swift */; };
 		61426BF12A20FADE0007349C /* ListaSons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61426BF02A20FADE0007349C /* ListaSons.swift */; };
+		BD0CDB0F2A276FE1005FDAFA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CDB0E2A276FE1005FDAFA /* ViewModel.swift */; };
+		BDC3B1422A2627950090CF93 /* TickShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B1412A2627950090CF93 /* TickShape.swift */; };
+		BDC3B1442A2629030090CF93 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B1432A2629030090CF93 /* ClockView.swift */; };
+		BDC3B1462A26327A0090CF93 /* CircleWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B1452A26327A0090CF93 /* CircleWatchView.swift */; };
+		BDC3B1482A2634EB0090CF93 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B1472A2634EB0090CF93 /* ColorExtension.swift */; };
+		BDC3B14A2A263A380090CF93 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B1492A263A380090CF93 /* NumbersView.swift */; };
+		BDC3B14C2A26C2940090CF93 /* NeedleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B14B2A26C2940090CF93 /* NeedleView.swift */; };
+		BDC3B14E2A26CDB20090CF93 /* LapItemInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B14D2A26CDB20090CF93 /* LapItemInspector.swift */; };
+		BDC3B1502A26CE1F0090CF93 /* LapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3B14F2A26CE1F0090CF93 /* LapType.swift */; };
 		D94CABE72A1E49010094B28D /* Relogio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CABE62A1E49010094B28D /* Relogio.swift */; };
 		D97E49332A1F767E00CAB3CE /* ListTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97E49322A1F767E00CAB3CE /* ListTimeZone.swift */; };
 		D9AAB5EF2A210DA90025BE58 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAB5EE2A210DA90025BE58 /* List.swift */; };
@@ -38,6 +47,15 @@
 		61426BEC2A1F8AC20007349C /* AdicionarAlarme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarAlarme.swift; sourceTree = "<group>"; };
 		61426BEE2A20F9180007349C /* DiasDaSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiasDaSemana.swift; sourceTree = "<group>"; };
 		61426BF02A20FADE0007349C /* ListaSons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSons.swift; sourceTree = "<group>"; };
+		BD0CDB0E2A276FE1005FDAFA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BDC3B1412A2627950090CF93 /* TickShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickShape.swift; sourceTree = "<group>"; };
+		BDC3B1432A2629030090CF93 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		BDC3B1452A26327A0090CF93 /* CircleWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWatchView.swift; sourceTree = "<group>"; };
+		BDC3B1472A2634EB0090CF93 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		BDC3B1492A263A380090CF93 /* NumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
+		BDC3B14B2A26C2940090CF93 /* NeedleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleView.swift; sourceTree = "<group>"; };
+		BDC3B14D2A26CDB20090CF93 /* LapItemInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapItemInspector.swift; sourceTree = "<group>"; };
+		BDC3B14F2A26CE1F0090CF93 /* LapType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapType.swift; sourceTree = "<group>"; };
 		D94CABE62A1E49010094B28D /* Relogio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relogio.swift; sourceTree = "<group>"; };
 		D97E49322A1F767E00CAB3CE /* ListTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTimeZone.swift; sourceTree = "<group>"; };
 		D9AAB5EE2A210DA90025BE58 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
@@ -92,8 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				083A2A912A1E39C400C6F8E8 /* Aux */,
-				08A0B17B2A24ECAD001E1999 /* Stopwatch */,
-				089275462A1BAA9300D5AC92 /* Preview Content */,
 				089275402A1BAA9200D5AC92 /* ClockAppApp.swift */,
 				089275422A1BAA9200D5AC92 /* ContentView.swift */,
 				08A0B17B2A24ECAD001E1999 /* Stopwatch */,
@@ -116,6 +132,7 @@
 		08A0B17B2A24ECAD001E1999 /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
+				BDC3B1402A26267E0090CF93 /* ScreenForWatch */,
 				08A0B17C2A24ECBB001E1999 /* Stopwatch.swift */,
 			);
 			path = Stopwatch;
@@ -130,6 +147,22 @@
 				61426BF02A20FADE0007349C /* ListaSons.swift */,
 			);
 			path = AlarmeView;
+			sourceTree = "<group>";
+		};
+		BDC3B1402A26267E0090CF93 /* ScreenForWatch */ = {
+			isa = PBXGroup;
+			children = (
+				BDC3B1452A26327A0090CF93 /* CircleWatchView.swift */,
+				BDC3B1432A2629030090CF93 /* ClockView.swift */,
+				BDC3B1472A2634EB0090CF93 /* ColorExtension.swift */,
+				BDC3B1492A263A380090CF93 /* NumbersView.swift */,
+				BDC3B1412A2627950090CF93 /* TickShape.swift */,
+				BDC3B14B2A26C2940090CF93 /* NeedleView.swift */,
+				BDC3B14D2A26CDB20090CF93 /* LapItemInspector.swift */,
+				BDC3B14F2A26CE1F0090CF93 /* LapType.swift */,
+				BD0CDB0E2A276FE1005FDAFA /* ViewModel.swift */,
+			);
+			path = ScreenForWatch;
 			sourceTree = "<group>";
 		};
 		D93E94B12A1CD9C60095E1BA /* Relogio */ = {
@@ -211,9 +244,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC3B1482A2634EB0090CF93 /* ColorExtension.swift in Sources */,
+				BDC3B14A2A263A380090CF93 /* NumbersView.swift in Sources */,
 				61426BF12A20FADE0007349C /* ListaSons.swift in Sources */,
+				BDC3B1442A2629030090CF93 /* ClockView.swift in Sources */,
 				08A0B17D2A24ECBB001E1999 /* Stopwatch.swift in Sources */,
+				BD0CDB0F2A276FE1005FDAFA /* ViewModel.swift in Sources */,
 				61426BE62A1D07980007349C /* AlarmeView.swift in Sources */,
+				BDC3B1422A2627950090CF93 /* TickShape.swift in Sources */,
+				BDC3B14E2A26CDB20090CF93 /* LapItemInspector.swift in Sources */,
+				BDC3B14C2A26C2940090CF93 /* NeedleView.swift in Sources */,
 				089275432A1BAA9200D5AC92 /* ContentView.swift in Sources */,
 				61426BEF2A20F9180007349C /* DiasDaSemana.swift in Sources */,
 				D97E49332A1F767E00CAB3CE /* ListTimeZone.swift in Sources */,
@@ -222,7 +262,9 @@
 				089275412A1BAA9200D5AC92 /* ClockAppApp.swift in Sources */,
 				61426BED2A1F8AC20007349C /* AdicionarAlarme.swift in Sources */,
 				082864322A24D5FB00090A04 /* GenericButton.swift in Sources */,
+				BDC3B1502A26CE1F0090CF93 /* LapType.swift in Sources */,
 				08C97D6D2A1CFC7D0072880F /* TimerFunctionality.swift in Sources */,
+				BDC3B1462A26327A0090CF93 /* CircleWatchView.swift in Sources */,
 				083A2A932A1E39D100C6F8E8 /* CircularProgress.swift in Sources */,
 				083A2A952A1E526F00C6F8E8 /* SongSheet.swift in Sources */,
 			);
